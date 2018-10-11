@@ -26,8 +26,8 @@ Barra = definir_estrutura("barra","x y dx")
 BARRA_INICIAL = Barra(LARGURA // 2 + LARGURA // 2.5, ALTURA // 2 , 0)
 
 # !!! TODO
-def desenha(Barra):
-    colocar_imagem(IMG_BARRA,TELA,Barra.x,Barra.y)
+def desenha(barra):
+    colocar_imagem_sobre_tela_e_mostrar(IMG_BARRA , barra.x , barra.y)
 
 # !!! TODO
 def trata_tecla(barra,tecla):

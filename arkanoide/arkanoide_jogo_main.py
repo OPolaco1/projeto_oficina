@@ -19,7 +19,7 @@ peguei o layout do exemplo do gato que o professor tinha feito portando ainda pr
 def main(inic):
     big_bang(inic, frequencia=FREQUENCIA,
              #quando_tick=mover,
-             desenhar=desenha,
+             desenhar = desenha,
              quando_tecla=trata_tecla,
              #parar_quando=final_da_tela,
              modo_debug=True
