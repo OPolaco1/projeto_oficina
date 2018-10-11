@@ -18,12 +18,12 @@ peguei o layout do exemplo do gato que o professor tinha feito portando ainda pr
 '''
 def main(inic):
     big_bang(inic, frequencia=FREQUENCIA,
-             quando_tick=mover,  #Gato -> Gato  #LISTA DE DESEJOS
-             desenhar=desenha,   #Gato -> Imagem
-             quando_tecla=trata_tecla, #Gato, Tecla -> Gato
-             parar_quando=final_da_tela,  #Gato -> Boolean
+             #quando_tick=mover,
+             desenhar=desenha,
+             quando_tecla=trata_tecla,
+             #parar_quando=final_da_tela,
              modo_debug=True
     )
 
 
-main(GATO_INICIAL)   #chamando o main com estado inicial  = 0
+main(Barra)   #chamando o main com estado inicial  = 0
