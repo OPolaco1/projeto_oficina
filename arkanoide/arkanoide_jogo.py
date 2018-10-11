@@ -13,8 +13,8 @@ TELA = criar_tela_base(LARGURA,ALTURA)
 IMG_BARRA = carregar_imagem("barra.png" ,80 , 30)
 
 
-SETA_ESQUERDA = pg.K_LEFT
-SETA_DIREITA = pg.K_RIGHT
+SETA_ESQUERDA = pg.K_a
+SETA_DIREITA = pg.K_d
 #LIMITE_ESQUERDO = 0 + IMG_BARRA // 2
 #LIMITE_DIREITO = LARGURA - IMG_BARRA // 2
 
@@ -29,7 +29,6 @@ BARRA_INICIAL = Barra(LARGURA // 2 , ALTURA // 2 + LARGURA // 2.5, 0)
 def desenha(barra):
     colocar_imagem_sobre_tela_e_mostrar(IMG_BARRA , barra.x , barra.y)
 
-
 def mover_barra(barra):
     posicao = barra.x + barra.dx
     return barra(posicao, barra.dx)
@@ -37,11 +36,11 @@ def mover_barra(barra):
 
 def trata_tecla(barra,tecla):
     if tecla == SETA_ESQUERDA:
-        return barra.dx - 3
+        return Barra(barra.x, barra.dx - 3)
     elif tecla == SETA_DIREITA:
-        return barra.dx + 3
+        return Barra(barra.x, barra.dx + 3)
     #else
-    return barra
+    return Barra
 
 
 
