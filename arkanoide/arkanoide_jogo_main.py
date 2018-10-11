@@ -20,10 +20,10 @@ def main(inic):
     big_bang(inic, frequencia=FREQUENCIA,
              #quando_tick=mover,
              desenhar = desenha,
-             quando_tecla=trata_tecla,
+             quando_tecla = trata_tecla,
              #parar_quando=final_da_tela,
              modo_debug=True
     )
 
 
-main(Barra)   #chamando o main com estado inicial  = 0
+main(BARRA_INICIAL)   #chamando o main com estado inicial  = 0

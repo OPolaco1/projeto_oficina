@@ -23,14 +23,24 @@ SETA_DIREITA = pg.K_RIGHT
 
 Barra = definir_estrutura("barra","x y dx")
 
-BARRA_INICIAL = Barra(LARGURA // 2 + LARGURA // 2.5, ALTURA // 2 , 0)
+BARRA_INICIAL = Barra(LARGURA // 2 , ALTURA // 2 + LARGURA // 2.5, 0)
 
-# !!! TODO
+
 def desenha(barra):
     colocar_imagem_sobre_tela_e_mostrar(IMG_BARRA , barra.x , barra.y)
 
-# !!! TODO
+
+def mover_barra(barra):
+    posicao = barra.x + barra.dx
+    return barra(posicao, barra.dx)
+
+
 def trata_tecla(barra,tecla):
+    if tecla == SETA_ESQUERDA:
+        return barra.dx - 3
+    elif tecla == SETA_DIREITA:
+        return barra.dx + 3
+    #else
     return barra
 
 
@@ -54,3 +64,4 @@ def desenhar(retan):
 
 desenhar(retan)
 '''
+
