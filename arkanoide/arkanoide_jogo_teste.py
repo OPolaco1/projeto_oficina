@@ -3,7 +3,7 @@
 
 import unittest
 
-from htdp_pt_br.universe import *
+
 
 from arkanoide.arkanoide_jogo import *
 

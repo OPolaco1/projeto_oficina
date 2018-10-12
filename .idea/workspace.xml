@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54183337-085c-4da0-83e0-b2200d6d94a3" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-596029811">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="jpg" value="3" />
+          <entry key="png" value="2" />
+          <entry key="py" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="5" />
+          <entry key="Python" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="4248" />
+          <entry key="txt" value="46" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="46" />
+          <entry key="Python" value="4248" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="trabalho_oficina" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+              <folding>
+                <marker date="1539373078804" expanded="true" signature="487:506" ph="..." />
+                <marker date="1539373078804" expanded="true" signature="688:690" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo_teste.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <folding>
+                <element signature="e#47#62#0" expanded="true" />
+                <marker date="1539305080391" expanded="true" signature="138:139" ph="..." />
+                <marker date="1539305080391" expanded="true" signature="138:143" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/arkanoide/arkanoide_jogo_teste.py" />
+        <option value="$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py" />
+        <option value="$PROJECT_DIR$/arkanoide/arkanoide_jogo.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="260" />
+    <option name="y" value="25" />
+    <option name="width" value="1390" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="trabalho_oficina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trabalho_oficina" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trabalho_oficina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trabalho_oficina" type="462c0819:PsiDirectoryNode" />
+              <item name="arkanoide" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\clayt\Área de Trabalho\trabalho_oficina\arkanoide" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.arkanoide_jogo_main">
+    <configuration name="arkanoide_jogo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="projetooficina" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/arkanoide" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/arkanoide/arkanoide_jogo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="arkanoide_jogo_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="projetooficina" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/arkanoide" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for arkanoide_jogo_teste.Test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="projetooficina" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/arkanoide" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;arkanoide_jogo_teste.Test&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.arkanoide_jogo" />
+      <item itemvalue="Python.arkanoide_jogo_main" />
+      <item itemvalue="Python tests.Unittests for arkanoide_jogo_teste.Test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.arkanoide_jogo_main" />
+        <item itemvalue="Python tests.Unittests for arkanoide_jogo_teste.Test" />
+        <item itemvalue="Python.arkanoide_jogo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54183337-085c-4da0-83e0-b2200d6d94a3" name="Default Changelist" comment="" />
+      <created>1538699876882</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538699876882</updated>
+    </task>
+    <task id="LOCAL-00001" summary="PRIMEIRA ALTERAÇÃO APOS O COMMIT INICIAL">
+      <created>1538703095151</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1538703095151</updated>
+    </task>
+    <task id="LOCAL-00002" summary="PRIMEIRA ALTERAÇÃO APOS O COMMIT INICIAL">
+      <created>1539220867625</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539220867625</updated>
+    </task>
+    <task id="LOCAL-00003" summary="PRIMEIRA ALTERAÇÃO APOS O COMMIT INICIAL">
+      <created>1539222220066</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539222220066</updated>
+    </task>
+    <task id="LOCAL-00004" summary="PRIMEIRA ALTERAÇÃO APOS O COMMIT INICIAL">
+      <created>1539225509209</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1539225509209</updated>
+    </task>
+    <task id="LOCAL-00005" summary="PRIMEIRA ALTERAÇÃO APOS O COMMIT INICIAL">
+      <created>1539226299170</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1539226299170</updated>
+    </task>
+    <task id="LOCAL-00006" summary="PRIMEIRA ALTERAÇÃO APOS O COMMIT INICIAL">
+      <created>1539373107250</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1539373107250</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.10 at 23h 08m 19s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.10 at 23h 08m 25s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.10 at 23h 08m 32s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.10 at 23h 17m 34s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.10 at 23h 18m 04s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.11 at 21h 38m 10s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.11 at 21h 38m 17s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.11 at 21h 41m 23s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.11 at 21h 41m 49s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_arkanoide_jogo_teste_Test - 2018.10.11 at 21h 41m 58s.xml">
+      <configuration name="Unittests for arkanoide_jogo_teste.Test" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="260" y="25" width="1390" height="1000" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913943" visible="true" weight="0.2514793" />
+      <window_info id="Structure" order="1" sideWeight="0.5008606" side_tool="true" weight="0.2496329" />
+      <window_info id="Favorites" order="2" sideWeight="0.5008606" side_tool="true" weight="0.2496329" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298731" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298731" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4992658" weight="0.3298731" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007342" side_tool="true" weight="0.3298731" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="PRIMEIRA ALTERAÇÃO APOS O COMMIT INICIAL" />
+    <option name="LAST_COMMIT_MESSAGE" value="PRIMEIRA ALTERAÇÃO APOS O COMMIT INICIAL" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/htdp_pt_br/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/pygame/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/htdp_pt_br/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/htdp_pt_br/universe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arkanoide/desenho_retangulo.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/collections/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="360" selection-start-line="360" selection-end-line="360" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arkanoide/images.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arkanoide/barra.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/htdp_pt_br/image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="383" selection-start-line="383" selection-end-line="383" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo_teste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <element signature="e#47#62#0" expanded="true" />
+            <marker date="1539305080391" expanded="true" signature="138:139" ph="..." />
+            <marker date="1539305080391" expanded="true" signature="138:143" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <marker date="1539373078804" expanded="true" signature="487:506" ph="..." />
+            <marker date="1539373078804" expanded="true" signature="688:690" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
