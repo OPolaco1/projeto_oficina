@@ -26,16 +26,10 @@ Y = ALTURA // 2 + LARGURA // 2.5
 BARRA_INICIAL = Barra(LARGURA // 2 , Y, 0)
 
 
-def mover(barra):
-    return barra
+
 
 def desenha(barra):
-    colocar_imagem_sobre_tela_e_mostrar(IMG_BARRA , barra.x , Y)
-
-def mover_barra(barra):
-    posicao = barra.x + barra.dx
-    return barra(posicao, Y, barra.dx)
-
+    colocar_imagem(IMG_BARRA,TELA,barra.x,Y)
 
 def trata_tecla(barra,tecla):
     if tecla == SETA_ESQUERDA:
@@ -44,6 +38,14 @@ def trata_tecla(barra,tecla):
         return Barra(barra.x, Y, barra.dx + 3)
     #else
     return barra
+
+
+def mover_barra(barra):
+
+    posicao = barra.x + barra.dx
+    return Barra(posicao, Y, barra.dx)
+
+
 
 
 
