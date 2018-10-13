@@ -21,6 +21,7 @@ def main(inic):
              quando_tick=mover_barra,
              desenhar = desenha,
              quando_tecla = trata_tecla,
+             #quando_mouse= trata_mouse,
              #parar_quando=final_da_tela,
              modo_debug = True
     )
