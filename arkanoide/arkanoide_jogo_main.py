@@ -22,9 +22,9 @@ def main(inic):
              desenhar = desenha,
              quando_tecla = trata_tecla,
              #quando_mouse= trata_mouse,
-             #parar_quando=final_da_tela,
+             #parar_quando=final_da_tela,dd
              modo_debug = True
     )
 
 
-main(BARRA_INICIAL)   #chamando o main com estado inicial  = 0
+main(BARRA_INICIAL)   #chamando o main com estado iniaacial  = 0

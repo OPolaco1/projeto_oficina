@@ -28,7 +28,9 @@ BARRA_INICIAL = Barra(LARGURA // 2 , Y)
 
 
 
-
+'''
+as condicionais da função desenha serve para limitar o movimento da barra para nao ultrapassar os limites da tela
+'''
 def desenha(barra):
     if (barra.x < LIMITE_DIREITO and barra.x > LIMITE_ESQUERDO):
         colocar_imagem(IMG_BARRA,TELA,barra.x,Y)
@@ -39,13 +41,30 @@ def desenha(barra):
 
 
 
-
 def trata_tecla(barra,tecla):
+    '''
+
+    :param barra:
+    :param tecla:
+    :return:
+    '''
+    '''   
+    comparação para limitar a barra aos limites laterais impedindo assim que a barra suma da tela
+    '''
+
+    if(barra.x < LIMITE_ESQUERDO):
+        return Barra(LIMITE_ESQUERDO,Y)
+    elif(barra.x > LIMITE_DIREITO):
+        return Barra(LIMITE_DIREITO,Y)
+    '''
+    caso passe das comparações acima ele ira comparar qual tecla foi clicada para mover a barra para a direção certa
+    obs ainda nao consegui fazer a barra mexer simplesmente segurando a tecla tem q aperfeiçoar isso 
+    '''
     if tecla == SETA_ESQUERDA:
         return Barra(barra.x - 3, Y)
     elif tecla == SETA_DIREITA:
         return Barra(barra.x + 3, Y)
-    #else
+        #else
     return barra
 
 
