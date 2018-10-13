@@ -10,20 +10,21 @@ LARGURA,ALTURA = 800,800
 
 TELA = criar_tela_base(LARGURA,ALTURA)
 
-IMG_BARRA = carregar_imagem("barra.png" ,80 , 30)
+IMG_BARRA = carregar_imagem("barra.png", 80, 30)
+IMG_BOLA  = carregar_imagem("bolinha.png", 25, 25)
+IMG_BLOCO = carregar_imagem("bloco.jpg", 80, 20)
 
 
 
 SETA_ESQUERDA = pg.K_a
 SETA_DIREITA = pg.K_d
-LIMITE_ESQUERDO = 0 + largura_imagem(IMG_BARRA) // 4
-LIMITE_DIREITO = LARGURA - largura_imagem(IMG_BARRA) // 4
-
-
-
-
-Barra = definir_estrutura("barra","x y ")
+LIMITE_ESQUERDO = 0 + largura_imagem(IMG_BOLA) // 4
+LIMITE_DIREITO = LARGURA - largura_imagem(IMG_BOLA) // 4
 Y = ALTURA // 2 + LARGURA // 2.5
+
+
+
+Barra = definir_estrutura("barra","x y")
 BARRA_INICIAL = Barra(LARGURA // 2 , Y)
 
 
@@ -86,7 +87,7 @@ Barra pode ser formada por: Int[
 '''
 
 '''
-retan = IMG_BARRA
+retan = IMG_BLOCO
 
 
 def desenhar(retan):
@@ -95,5 +96,5 @@ def desenhar(retan):
 
 
 desenhar(retan)
-'''
 
+'''
