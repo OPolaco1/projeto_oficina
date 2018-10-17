@@ -24,8 +24,8 @@ Y = ALTURA // 2 + LARGURA // 2.5
 
 
 
-Barra = definir_estrutura("barra","x y")
-BARRA_INICIAL = Barra(LARGURA // 2 , Y)
+Barra = definir_estrutura("barra","x y dx")
+BARRA_INICIAL = Barra(LARGURA // 2, Y, 0)
 
 
 
@@ -62,18 +62,22 @@ def trata_tecla(barra,tecla):
     obs ainda nao consegui fazer a barra mexer simplesmente segurando a tecla tem q aperfeiçoar isso 
     '''
     if tecla == SETA_ESQUERDA:
-        return Barra(barra.x - 3, Y)
+        return Barra(barra.x, Y,barra.dx -3)
     elif tecla == SETA_DIREITA:
-        return Barra(barra.x + 3, Y)
+        return Barra(barra.x, Y, barra.dx +3)
         #else
     return barra
 
 
 def mover_barra(barra):
 
-    posicao = barra.x
-    return Barra(posicao, Y,)
+    posicao = barra.x + barra.dx
+    return Barra(posicao, Y, barra.dx)
 
+def solta_tecla(barra, tecla):
+    if SETA_DIREITA == tecla or SETA_ESQUERDA == tecla:
+
+        return Barra(barra.x, Y, 0)
 
 
 
