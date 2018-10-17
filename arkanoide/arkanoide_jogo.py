@@ -11,7 +11,7 @@ LARGURA,ALTURA = 800,800
 TELA = criar_tela_base(LARGURA,ALTURA)
 
 IMG_BARRA = carregar_imagem("barra.png", 80, 30)
-IMG_BOLA  = carregar_imagem("bolinha.png", 25, 25)
+IMG_BOLA  = carregar_imagem("bolinha.png", 30, 30)
 IMG_BLOCO = carregar_imagem("bloco.jpg", 80, 20)
 
 
@@ -78,6 +78,7 @@ def solta_tecla(barra, tecla):
     if SETA_DIREITA == tecla or SETA_ESQUERDA == tecla:
 
         return Barra(barra.x, Y, 0)
+    return barra
 
 
 
@@ -89,9 +90,9 @@ def solta_tecla(barra, tecla):
 Barra pode ser formada por: Int[
 
 '''
-
 '''
-retan = IMG_BLOCO
+
+retan = IMG_BOLA
 
 
 def desenhar(retan):

@@ -6,7 +6,7 @@ from arkanoide.arkanoide_jogo import *
 
 
 ''' ================= '''
-''' Main (Big Bang):
+''' Main (Big Bang):u89h
 '''
 
 ''' Gato -> Gato '''
@@ -23,7 +23,7 @@ def main(inic):
              quando_tecla = trata_tecla,
              quando_solta_tecla= solta_tecla,
              #quando_mouse= trata_mouse,
-             #parar_quando=final_da_tela,dd
+             #parar_quando=final_da_tela,
              modo_debug = True
     )
 
