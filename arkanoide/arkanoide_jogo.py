@@ -18,6 +18,7 @@ IMG_BLOCO = carregar_imagem("bloco.jpg", 80, 20)
 
 SETA_ESQUERDA = pg.K_a
 SETA_DIREITA = pg.K_d
+ESPACO = pg.K_SPACE
 LIMITE_ESQUERDO = 0 + largura_imagem(IMG_BOLA) // 4
 LIMITE_DIREITO = LARGURA - largura_imagem(IMG_BOLA) // 4
 Y = ALTURA // 2 + LARGURA // 2.5
@@ -30,11 +31,12 @@ BARRA_INICIAL = Barra(LARGURA // 2, Y, 0)
 Bola = definir_estrutura("bola","x dx y dy")
 BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BOLA), 0)
 
-
+Jogo = definir_estrutura("jogo", "barra bola game_over")
+JOGO_INICIAL = Jogo(BARRA_INICIAL, BOLA_INICIAL)
 '''
 as condicionais da função desenha serve para limitar o movimento da barra para nao ultrapassar os limites da tela
 '''
-def desenha(barra):
+def desenha_barra(barra):
     if (barra.x < LIMITE_DIREITO and barra.x > LIMITE_ESQUERDO):
         colocar_imagem(IMG_BARRA,TELA,barra.x,Y)
     elif (barra.x <= LIMITE_DIREITO):
@@ -42,9 +44,10 @@ def desenha(barra):
     elif (barra.x >= LIMITE_ESQUERDO):
         colocar_imagem(IMG_BARRA,TELA,LIMITE_DIREITO,Y)
 
+def desenha_bola(bola):
 
 
-def trata_tecla(barra,tecla):
+def trata_tecla_barra(barra,tecla):
     '''
 
     :param barra:
@@ -76,14 +79,19 @@ def mover_barra(barra):
     posicao = barra.x + barra.dx
     return Barra(posicao, Y, barra.dx)
 
-def solta_tecla(barra, tecla):
+def solta_tecla_barra(barra, tecla):
     if SETA_DIREITA == tecla or SETA_ESQUERDA == tecla:
 
         return Barra(barra.x, Y, 0)
     return barra
 
 
+def mover_jogo(jogo):
+    return jogo
 
+def desenha_jogo(jogo):
+    if (not jogo.game_over):
+        desenha_barra(jogo.barra)
 
 #print(BARRA_INICIAL)
 '''
@@ -93,7 +101,7 @@ Barra pode ser formada por: Int[
 
 '''
 
-
+'''
 retan = IMG_BOLA
 
 
@@ -104,3 +112,4 @@ def desenhar(retan):
 
 desenhar(retan)
 
+'''

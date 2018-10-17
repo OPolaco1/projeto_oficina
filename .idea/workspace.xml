@@ -4,7 +4,7 @@
     <list default="true" id="54183337-085c-4da0-83e0-b2200d6d94a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/arkanoide/arkanoide_jogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/arkanoide/arkanoide_jogo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arkanoide/bolinha.png" beforeDir="false" afterPath="$PROJECT_DIR$/arkanoide/bolinha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,12 +105,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="421" />
+          <entry key="py" value="637" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="421" />
+          <entry key="Python" value="637" />
         </counts>
       </usages-collector>
     </session>
@@ -123,10 +123,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="221">
+              <caret line="91" column="19" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
               <folding>
-                <marker date="1539743117945" expanded="true" signature="2077:2192" ph="..." />
+                <marker date="1539743920151" expanded="true" signature="2385:2408" ph="..." />
               </folding>
             </state>
           </provider>
@@ -135,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="180">
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -220,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.arkanoide_jogo">
+  <component name="RunManager" selected="Python.arkanoide_jogo_main">
     <configuration name="arkanoide_jogo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="projetooficina" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -284,8 +284,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.arkanoide_jogo" />
         <item itemvalue="Python.arkanoide_jogo_main" />
+        <item itemvalue="Python.arkanoide_jogo" />
         <item itemvalue="Python tests.Unittests for arkanoide_jogo_teste.Test" />
       </list>
     </recent_temporary>
@@ -378,7 +378,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539742103500</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="travamento da barra para nao sair da tela">
+      <created>1539743170040</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1539743170040</updated>
+    </task>
+    <task id="LOCAL-00013" summary="travamento da barra para nao sair da tela">
+      <created>1539743179115</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1539743179115</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -526,17 +540,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="180">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="221">
+          <caret line="91" column="19" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
           <folding>
-            <marker date="1539743117945" expanded="true" signature="2077:2192" ph="..." />
+            <marker date="1539743920151" expanded="true" signature="2385:2408" ph="..." />
           </folding>
         </state>
       </provider>

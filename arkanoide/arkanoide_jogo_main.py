@@ -18,8 +18,8 @@ peguei o layout do exemplo do gato que o professor tinha feito portando ainda pr
 '''
 def main(inic):
     big_bang(inic, frequencia=FREQUENCIA,
-             quando_tick=mover_barra,
-             desenhar = desenha,
+             quando_tick=mover_jogo,
+             desenhar = desenha_jogo,
              quando_tecla = trata_tecla,
              quando_solta_tecla= solta_tecla,
              #quando_mouse= trata_mouse,
@@ -28,4 +28,4 @@ def main(inic):
     )
 
 
-main(BARRA_INICIAL)   #chamando o main com estado iniaacial  = 0
+main(JOGO_INICIAL)   #chamando o main com estado iniaacial  = 0
