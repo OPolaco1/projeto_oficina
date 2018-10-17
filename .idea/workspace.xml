@@ -4,7 +4,6 @@
     <list default="true" id="54183337-085c-4da0-83e0-b2200d6d94a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/arkanoide/arkanoide_jogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/arkanoide/arkanoide_jogo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/arkanoide/arkanoide_jogo_main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,12 +104,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="637" />
+          <entry key="py" value="722" />
+          <entry key="txt" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="637" />
+          <entry key="PLAIN_TEXT" value="43" />
+          <entry key="Python" value="722" />
         </counts>
       </usages-collector>
     </session>
@@ -123,10 +124,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="91" column="19" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
+            <state relative-caret-position="350">
+              <caret line="84" column="35" lean-forward="true" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
               <folding>
-                <marker date="1539743920151" expanded="true" signature="2385:2408" ph="..." />
+                <marker date="1539744362073" expanded="true" signature="1315:1318" ph="..." />
+                <marker date="1539744362073" expanded="true" signature="2413:2478" ph="..." />
               </folding>
             </state>
           </provider>
@@ -392,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539743179115</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="tentando configurar a bola na tela">
+      <created>1539744145375</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1539744145375</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -484,7 +493,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PRIMEIRA ALTERAÇÃO APOS O COMMIT INICIAL" />
     <MESSAGE value="travamento da barra para nao sair da tela" />
-    <option name="LAST_COMMIT_MESSAGE" value="travamento da barra para nao sair da tela" />
+    <MESSAGE value="tentando configurar a bola na tela" />
+    <option name="LAST_COMMIT_MESSAGE" value="tentando configurar a bola na tela" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/arkanoide/desenho_retangulo.py" />
@@ -547,10 +557,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/arkanoide/arkanoide_jogo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="91" column="19" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
+        <state relative-caret-position="350">
+          <caret line="84" column="35" lean-forward="true" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
           <folding>
-            <marker date="1539743920151" expanded="true" signature="2385:2408" ph="..." />
+            <marker date="1539744362073" expanded="true" signature="1315:1318" ph="..." />
+            <marker date="1539744362073" expanded="true" signature="2413:2478" ph="..." />
           </folding>
         </state>
       </provider>

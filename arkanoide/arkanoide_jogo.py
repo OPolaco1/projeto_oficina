@@ -79,7 +79,7 @@ def mover_barra(barra):
     posicao = barra.x + barra.dx
     return Barra(posicao, Y, barra.dx)
 
-def solta_tecla_barra(barra, tecla):
+def solta_tecla(barra, tecla):
     if SETA_DIREITA == tecla or SETA_ESQUERDA == tecla:
 
         return Barra(barra.x, Y, 0)
