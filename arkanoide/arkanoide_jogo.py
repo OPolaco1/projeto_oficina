@@ -11,7 +11,7 @@ LARGURA,ALTURA = 800,800
 TELA = criar_tela_base(LARGURA,ALTURA)
 
 IMG_BARRA = carregar_imagem("barra.png", 80, 30)
-IMG_BOLA  = carregar_imagem("bolinha.png", 30, 30)
+IMG_BOLA  = carregar_imagem("bolinha.png", 40, 40)
 IMG_BLOCO = carregar_imagem("bloco.jpg", 80, 20)
 
 
@@ -27,6 +27,8 @@ Y = ALTURA // 2 + LARGURA // 2.5
 Barra = definir_estrutura("barra","x y dx")
 BARRA_INICIAL = Barra(LARGURA // 2, Y, 0)
 
+Bola = definir_estrutura("bola","x dx y dy")
+BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BOLA), 0)
 
 
 '''
@@ -90,7 +92,7 @@ def solta_tecla(barra, tecla):
 Barra pode ser formada por: Int[
 
 '''
-'''
+
 
 retan = IMG_BOLA
 
@@ -102,4 +104,3 @@ def desenhar(retan):
 
 desenhar(retan)
 
-'''
