@@ -11,7 +11,7 @@ LARGURA,ALTURA = 800,800
 TELA = criar_tela_base(LARGURA,ALTURA)
 
 IMG_BARRA = carregar_imagem("barra.png", 150, 30)
-IMG_BOLA  = carregar_imagem("bolinha.png", 40, 40)
+IMG_BOLA  = carregar_imagem("bolinha.png", 150, 100)
 IMG_BLOCO = carregar_imagem("bloco.jpg", 80, 20)
 
 
@@ -31,7 +31,7 @@ Barra = definir_estrutura("barra","x y dx")
 BARRA_INICIAL = Barra(LARGURA // 2, Y, 0)
 
 Bola = definir_estrutura("bola","x dx y dy")
-BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BOLA), 0)
+BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BARRA)//2 , 0)
 
 Jogo = definir_estrutura("jogo", "barra bola game_over")
 JOGO_INICIAL = Jogo(BARRA_INICIAL, BOLA_INICIAL, False)
@@ -86,6 +86,10 @@ def trata_tecla_barra(barra,tecla):
     return barra
 
 
+def mover_bola(bola):
+    pass
+
+
 def mover_barra(barra):
 
     posicao = barra.x + barra.dx
@@ -103,9 +107,20 @@ def solta_tecla_barra(barra, tecla):
     return barra
 
 
+def bola_parada(bola):
+    if (bola.dx == 0 and bola.dy == 0):
+        return True
+    #else
+    return False
+
 def mover_jogo(jogo):
     nova_barra = mover_barra(jogo.barra)
-    return Jogo(nova_barra, jogo.bola, False)
+    teste = bola_parada(jogo.bola)
+    if (teste == True):
+
+        nova_bola = Bola(jogo.barra.x, jogo.bola.dx, jogo.bola.y, jogo.bola.dy)
+
+    return Jogo(nova_barra, nova_bola, False)
 
 
 
