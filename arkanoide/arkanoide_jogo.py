@@ -21,8 +21,8 @@ SETA_DIREITA = pg.K_d
 ESPACO = pg.K_SPACE
 LIMITE_ESQUERDO = 0 + largura_imagem(IMG_BOLA) // 4
 LIMITE_DIREITO = LARGURA - largura_imagem(IMG_BOLA) // 4
-LIMITE_CIMA = ALTURA - altura_imagem(IMG_BOLA) // 4
-LIMITE_BAIXO = 0 + altura_imagem(IMG_BOLA) // 4
+LIMITE_BAIXO = ALTURA - altura_imagem(IMG_BOLA) // 4
+LIMITE_CIMA = 0 + altura_imagem(IMG_BOLA) // 4
 Y = ALTURA // 2 + LARGURA // 2.5
 
 
@@ -47,15 +47,20 @@ def desenha_barra(barra):
         colocar_imagem(IMG_BARRA,TELA,LIMITE_DIREITO,Y)
 
 def desenha_bola(bola):
-    if (bola.x < LIMITE_DIREITO and bola.x > LIMITE_ESQUERDO and bola.y < LIMITE_CIMA and bola.y > LIMITE_BAIXO):
+    if bola.x < LIMITE_DIREITO and bola.x > LIMITE_ESQUERDO and bola.y > LIMITE_CIMA and bola.y < LIMITE_BAIXO:
         colocar_imagem(IMG_BOLA,TELA, bola.x, bola.y)
 
 
-
+def trata_tecla_bola(bola,tecla):
+    if tecla ==pg.K_SPACE:
+        return Bola(bola.x, 0, bola.y, 6)
+    return bola
 
 def trata_tecla(jogo,tecla):
     nova_barra = trata_tecla_barra(jogo.barra,tecla)
-    return Jogo(nova_barra, jogo.bola,False)
+    nova_bola = trata_tecla_bola(jogo.bola,tecla)
+    return Jogo(nova_barra, nova_bola,False)
+
 
 
 
@@ -87,7 +92,10 @@ def trata_tecla_barra(barra,tecla):
 
 
 def mover_bola(bola):
-    pass
+    nova_bola = bola.y - bola.dy
+    if nova_bola < 0 + altura_imagem(IMG_BOLA):
+        return Bola(bola.x,bola.dx,nova_bola,-bola.dy)
+    return Bola(bola.x,bola.dx,nova_bola,bola.dy)
 
 
 def mover_barra(barra):
@@ -108,18 +116,18 @@ def solta_tecla_barra(barra, tecla):
 
 
 def bola_parada(bola):
-    if (bola.dx == 0 and bola.dy == 0):
-        return True
-    #else
-    return False
+    return (bola.dx == 0 and bola.dy == 0)
+
+
 
 def mover_jogo(jogo):
     nova_barra = mover_barra(jogo.barra)
-    teste = bola_parada(jogo.bola)
-    if (teste == True):
+
+    if bola_parada(jogo.bola):
 
         nova_bola = Bola(jogo.barra.x, jogo.bola.dx, jogo.bola.y, jogo.bola.dy)
-
+    else:
+        nova_bola = mover_bola(jogo.bola)
     return Jogo(nova_barra, nova_bola, False)
 
 
