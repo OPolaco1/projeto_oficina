@@ -94,7 +94,9 @@ def trata_tecla_barra(barra,tecla):
 def mover_bola(bola):
     nova_bola = bola.y - bola.dy
     if nova_bola < 0 + altura_imagem(IMG_BOLA):
-        return Bola(bola.x,bola.dx,nova_bola,-bola.dy)
+        return Bola(bola.x,bola.dx,nova_bola,-(bola.dy+0.5))
+    if nova_bola < LIMITE_ESQUERDO or nova_bola > LIMITE_DIREITO:
+        return Bola(bola.x,-bola.dx,nova_bola,bola.dy)
     return Bola(bola.x,bola.dx,nova_bola,bola.dy)
 
 
