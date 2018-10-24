@@ -10,7 +10,7 @@ LARGURA,ALTURA = 800,800
 
 TELA = criar_tela_base(LARGURA,ALTURA)
 
-IMG_BARRA = carregar_imagem("barra.png", 80, 30)
+IMG_BARRA = carregar_imagem("barra.png", 150, 30)
 IMG_BOLA  = carregar_imagem("bolinha.png", 40, 40)
 IMG_BLOCO = carregar_imagem("bloco.jpg", 80, 20)
 
@@ -47,7 +47,9 @@ def desenha_barra(barra):
         colocar_imagem(IMG_BARRA,TELA,LIMITE_DIREITO,Y)
 
 def desenha_bola(bola):
-    return bola
+    if (bola.x < LIMITE_DIREITO and bola.x > LIMITE_ESQUERDO and bola.y < LIMITE_CIMA and bola.y > LIMITE_BAIXO):
+        colocar_imagem(IMG_BOLA,TELA, bola.x, bola.y)
+
 
 
 
@@ -110,6 +112,7 @@ def mover_jogo(jogo):
 def desenha_jogo(jogo):
     if (not jogo.game_over):
         desenha_barra(jogo.barra)
+        desenha_bola(jogo.bola)
     else:
         return jogo
 
