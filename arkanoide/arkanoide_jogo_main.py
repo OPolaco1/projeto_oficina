@@ -21,11 +21,11 @@ def main(inic):
              quando_tick=mover_jogo,
              desenhar = desenha_jogo,
              quando_tecla = trata_tecla,
-             quando_solta_tecla= solta_tecla,
+             quando_solta_tecla = solta_tecla,
              #quando_mouse= trata_mouse,
              #parar_quando=final_da_tela,
              modo_debug = True
     )
 
 
-main(JOGO_INICIAL)   #chamando o main com estado iniaacial  = 0
+main(JOGO_INICIAL)   #chamando o main com estado iniaacial  =
