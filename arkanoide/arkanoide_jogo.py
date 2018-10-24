@@ -21,6 +21,8 @@ SETA_DIREITA = pg.K_d
 ESPACO = pg.K_SPACE
 LIMITE_ESQUERDO = 0 + largura_imagem(IMG_BOLA) // 4
 LIMITE_DIREITO = LARGURA - largura_imagem(IMG_BOLA) // 4
+LIMITE_CIMA = ALTURA - altura_imagem(IMG_BOLA) // 4
+LIMITE_BAIXO = 0 + altura_imagem(IMG_BOLA) // 4
 Y = ALTURA // 2 + LARGURA // 2.5
 
 
