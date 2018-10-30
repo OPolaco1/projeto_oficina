@@ -121,16 +121,23 @@ def bola_parada(bola):
     return (bola.dx == 0 and bola.dy == 0)
 
 
+def game_over(bola):
+    return bola.y >= ALTURA
+
+
 
 def mover_jogo(jogo):
-    nova_barra = mover_barra(jogo.barra)
+    if(not game_over(jogo.bola)):
+        nova_barra = mover_barra(jogo.barra)
 
-    if bola_parada(jogo.bola):
+        if bola_parada(jogo.bola):
 
-        nova_bola = Bola(jogo.barra.x, jogo.bola.dx, jogo.bola.y, jogo.bola.dy)
-    else:
-        nova_bola = mover_bola(jogo.bola)
-    return Jogo(nova_barra, nova_bola, False)
+            nova_bola = Bola(jogo.barra.x, jogo.bola.dx, jogo.bola.y, jogo.bola.dy)
+        else:
+            nova_bola = mover_bola(jogo.bola)
+        return Jogo(nova_barra, nova_bola, False)
+    return Jogo(jogo.barra,jogo.bola, True)
+
 
 
 
