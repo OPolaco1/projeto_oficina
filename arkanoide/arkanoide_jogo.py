@@ -31,7 +31,7 @@ Barra = definir_estrutura("barra","x y dx")
 BARRA_INICIAL = Barra(LARGURA // 2, Y, 0)
 
 Bola = definir_estrutura("bola","x dx y dy")
-BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BARRA)//2 , 0)
+BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BARRA)//2, 0)
 
 Jogo = definir_estrutura("jogo", "barra bola game_over")
 JOGO_INICIAL = Jogo(BARRA_INICIAL, BOLA_INICIAL, False)
@@ -89,15 +89,20 @@ def trata_tecla_barra(barra,tecla):
         return Barra(barra.x, Y, barra.dx +3)
         #else
     return barra
-
+'''
+teste
+'''
 
 def mover_bola(bola):
-    nova_bola = bola.y - bola.dy
-    if nova_bola < 0 + altura_imagem(IMG_BOLA):
-        return Bola(bola.x,bola.dx,nova_bola,-(bola.dy+0.5))
-    if nova_bola < LIMITE_ESQUERDO or nova_bola > LIMITE_DIREITO:
-        return Bola(bola.x,-bola.dx,nova_bola,bola.dy)
-    return Bola(bola.x,bola.dx,nova_bola,bola.dy)
+    nova_bola_y = bola.y - bola.dy
+    nova_bola_x = bola.x - bola.dx
+    if nova_bola_y < 0 + altura_imagem(IMG_BOLA):
+        return Bola(nova_bola_x,bola.dx,nova_bola_y,-(bola.dy+0.5))
+    if nova_bola_y < LIMITE_ESQUERDO or nova_bola_y > LIMITE_DIREITO:
+        return Bola(nova_bola_x,-bola.dx,nova_bola_y,bola.dy)
+    if nova_bola_y > altura_imagem(IMG_BARRA):
+        return Bola(nova_bola_x,bola.dx,nova_bola_y, -bola.dy)
+    return Bola(nova_bola_x,bola.dx,nova_bola_y,bola.dy)
 
 
 def mover_barra(barra):
