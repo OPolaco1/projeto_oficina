@@ -93,15 +93,23 @@ def trata_tecla_barra(barra,tecla):
 teste
 '''
 
+
+def colide_bola(bola):
+    nova_bola_y = bola.y - bola.dy
+    nova_bola_x = bola.x - bola.dx
+    return nova_bola_y > Y - altura_imagem(IMG_BARRA) //1.5
+
+
 def mover_bola(bola):
     nova_bola_y = bola.y - bola.dy
     nova_bola_x = bola.x - bola.dx
+
     if nova_bola_y < 0 + altura_imagem(IMG_BOLA):
         return Bola(nova_bola_x,bola.dx,nova_bola_y,-(bola.dy+0.5))
     if nova_bola_y < LIMITE_ESQUERDO or nova_bola_y > LIMITE_DIREITO:
         return Bola(nova_bola_x,-bola.dx,nova_bola_y,bola.dy)
-    if nova_bola_y > altura_imagem(IMG_BARRA):
-        return Bola(nova_bola_x,bola.dx,nova_bola_y, -bola.dy)
+    if colide_bola(bola):
+        return Bola(nova_bola_x, bola.dx, nova_bola_y, -bola.dy)
     return Bola(nova_bola_x,bola.dx,nova_bola_y,bola.dy)
 
 
