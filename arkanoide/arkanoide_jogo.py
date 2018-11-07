@@ -27,11 +27,13 @@ Y = ALTURA // 2 + LARGURA // 2.5
 
 
 
-Barra = definir_estrutura("barra","x y dx")
-BARRA_INICIAL = Barra(LARGURA // 2, Y, 0)
+Barra = definir_estrutura("barra","x y dx tam")
+BARRA_INICIAL = Barra(LARGURA // 2, Y, 0, 150)
 
 Bola = definir_estrutura("bola","x dx y dy")
 BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BARRA)//2, 0)
+
+
 
 Jogo = definir_estrutura("jogo", "barra bola game_over")
 JOGO_INICIAL = Jogo(BARRA_INICIAL, BOLA_INICIAL, False)
@@ -39,12 +41,13 @@ JOGO_INICIAL = Jogo(BARRA_INICIAL, BOLA_INICIAL, False)
 as condicionais da função desenha serve para limitar o movimento da barra para nao ultrapassar os limites da tela
 '''
 def desenha_barra(barra):
+    nova_barra = definir_dimensoes(IMG_BARRA,barra.tam,30)
     if (barra.x < LIMITE_DIREITO and barra.x > LIMITE_ESQUERDO):
-        colocar_imagem(IMG_BARRA,TELA,barra.x,Y)
+        colocar_imagem(nova_barra,TELA,barra.x,Y)
     elif (barra.x <= LIMITE_DIREITO):
-        colocar_imagem(IMG_BARRA,TELA,LIMITE_ESQUERDO,Y)
+        colocar_imagem(nova_barra,TELA,LIMITE_ESQUERDO,Y)
     elif (barra.x >= LIMITE_ESQUERDO):
-        colocar_imagem(IMG_BARRA,TELA,LIMITE_DIREITO,Y)
+        colocar_imagem(nova_barra,TELA,LIMITE_DIREITO,Y)
 
 def desenha_bola(bola):
     if bola.x < LIMITE_DIREITO and bola.x > LIMITE_ESQUERDO and bola.y > LIMITE_CIMA and bola.y < LIMITE_BAIXO:
@@ -53,6 +56,7 @@ def desenha_bola(bola):
 
 def trata_tecla_bola(bola,tecla):
     if tecla ==pg.K_SPACE:
+
         return Bola(bola.x, 0, bola.y, 6)
     return bola
 
@@ -84,9 +88,9 @@ def trata_tecla_barra(barra,tecla):
     obs ainda nao consegui fazer a barra mexer simplesmente segurando a tecla tem q aperfeiçoar isso 
     '''
     if tecla == SETA_ESQUERDA:
-        return Barra(barra.x, Y,barra.dx -3)
+        return Barra(barra.x, Y,barra.dx -3,barra.tam)
     elif tecla == SETA_DIREITA:
-        return Barra(barra.x, Y, barra.dx +3)
+        return Barra(barra.x, Y, barra.dx +3,barra.tam)
         #else
     return barra
 '''
@@ -94,10 +98,30 @@ teste
 '''
 
 
-def colide_bola(bola):
+def colide_bola(bola,barra):
     nova_bola_y = bola.y - bola.dy
     nova_bola_x = bola.x - bola.dx
-    return nova_bola_y > Y - altura_imagem(IMG_BARRA) //1.5
+    limite_barra_esquerdo = barra.x - barra.tam / (1 / 3)
+    limite_barra_direito = barra.x + barra.tam / (1 / 3)
+
+
+
+
+    if nova_bola_y > Y + altura_imagem(IMG_BARRA)/1.5:
+        if nova_bola_y <=  limite_barra_esquerdo:
+            if bola.x == 0:
+                return 1 #Bola(nova_bola_x,-bola.dy,bola.y,-bola.dy)
+            else:
+                return 2 #Bola(nova_bola_x,0,bola.y,-bola.dy)
+
+        if nova_bola_y >= limite_barra_direito:
+            if bola.x == 0:
+                return 3 #Bola(nova_bola_x, +bola.dy, bola.y, -bola.dy)
+            else:
+                return 4 #Bola(nova_bola_x, 0, bola.y, -bola.dy)
+        return 5 #Bola(bola.x,bola.dx,nova_bola_y,-bola.dy)
+
+    #return nova_bola_y > Y - altura_imagem(IMG_BARRA) //1.5
 
 
 def mover_bola(bola):
@@ -108,15 +132,17 @@ def mover_bola(bola):
         return Bola(nova_bola_x,bola.dx,nova_bola_y,-(bola.dy+0.5))
     if nova_bola_y < LIMITE_ESQUERDO or nova_bola_y > LIMITE_DIREITO:
         return Bola(nova_bola_x,-bola.dx,nova_bola_y,bola.dy)
-    if colide_bola(bola):
-        return Bola(nova_bola_x, bola.dx, nova_bola_y, -bola.dy)
+    # if nova_bola_x < 0 + altura_imagem(IMG_BOLA):
+    #     return Bola(nova_bola_x,-bola.dx,bola.y,bola.by)
+    # if
+
     return Bola(nova_bola_x,bola.dx,nova_bola_y,bola.dy)
 
 
 def mover_barra(barra):
 
     posicao = barra.x + barra.dx
-    return Barra(posicao, Y, barra.dx)
+    return Barra(posicao, Y, barra.dx,barra.tam)
 
 
 def solta_tecla(jogo, tecla):
@@ -126,7 +152,7 @@ def solta_tecla(jogo, tecla):
 def solta_tecla_barra(barra, tecla):
     if SETA_DIREITA == tecla or SETA_ESQUERDA == tecla:
 
-        return Barra(barra.x, Y, 0)
+        return Barra(barra.x, Y, 0,barra.tam)
     return barra
 
 
@@ -148,6 +174,19 @@ def mover_jogo(jogo):
             nova_bola = Bola(jogo.barra.x, jogo.bola.dx, jogo.bola.y, jogo.bola.dy)
         else:
             nova_bola = mover_bola(jogo.bola)
+        colisao = colide_bola(nova_bola,jogo.barra)
+        if colisao == 1:
+            nova_bola = Bola(jogo.bola.x,-jogo.bola.dy,jogo.bola.y,-jogo.bola.dy)
+        elif colisao == 2:
+            nova_bola = Bola(jogo.bola.x,0,jogo.bola.y,-jogo.bola.dy)
+        elif colisao == 3:
+            nova_bola = Bola(jogo.bola.x, +jogo.bola.dy, jogo.bola.y, -jogo.bola.dy)
+        elif colisao == 4:
+            nova_bola = Bola(jogo.bola.x, 0, jogo.bola.y, -jogo.bola.dy)
+        elif colisao == 5:
+            nova_bola = Bola(jogo.bola.x, jogo.bola.dx, jogo.bola.y, -jogo.bola.dy)
+
+
         return Jogo(nova_barra, nova_bola, False)
     return Jogo(jogo.barra,jogo.bola, True)
 
