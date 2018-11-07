@@ -32,6 +32,7 @@ BARRA_INICIAL = Barra(LARGURA // 2, Y, 0, 150)
 
 Bola = definir_estrutura("bola","x dx y dy")
 BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BARRA)//2, 0)
+DX = 6
 
 
 
@@ -108,13 +109,13 @@ def colide_bola(bola,barra):
 
 
     if nova_bola_y > Y + altura_imagem(IMG_BARRA)/1.5:
-        if nova_bola_y <=  limite_barra_esquerdo:
+        if nova_bola_x <=  limite_barra_esquerdo:
             if bola.x == 0:
                 return 1 #Bola(nova_bola_x,-bola.dy,bola.y,-bola.dy)
             else:
                 return 2 #Bola(nova_bola_x,0,bola.y,-bola.dy)
 
-        if nova_bola_y >= limite_barra_direito:
+        if nova_bola_x >= limite_barra_direito:
             if bola.x == 0:
                 return 3 #Bola(nova_bola_x, +bola.dy, bola.y, -bola.dy)
             else:
@@ -176,15 +177,15 @@ def mover_jogo(jogo):
             nova_bola = mover_bola(jogo.bola)
         colisao = colide_bola(nova_bola,jogo.barra)
         if colisao == 1:
-            nova_bola = Bola(jogo.bola.x,-jogo.bola.dy,jogo.bola.y,-jogo.bola.dy)
+            nova_bola = Bola(nova_bola.x,-DX,nova_bola.y,-nova_bola.dy)
         elif colisao == 2:
-            nova_bola = Bola(jogo.bola.x,0,jogo.bola.y,-jogo.bola.dy)
+            nova_bola = Bola(nova_bola.x,0,nova_bola.y,-nova_bola.dy)
         elif colisao == 3:
-            nova_bola = Bola(jogo.bola.x, +jogo.bola.dy, jogo.bola.y, -jogo.bola.dy)
+            nova_bola = Bola(nova_bola.x, DX, nova_bola.y, -nova_bola.dy)
         elif colisao == 4:
-            nova_bola = Bola(jogo.bola.x, 0, jogo.bola.y, -jogo.bola.dy)
+            nova_bola = Bola(nova_bola.x, 0, nova_bola.y, -nova_bola.dy)
         elif colisao == 5:
-            nova_bola = Bola(jogo.bola.x, jogo.bola.dx, jogo.bola.y, -jogo.bola.dy)
+            nova_bola = Bola(nova_bola.x, nova_bola.dx, nova_bola.y, -nova_bola.dy)
 
 
         return Jogo(nova_barra, nova_bola, False)
