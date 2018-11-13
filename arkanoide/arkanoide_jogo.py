@@ -31,7 +31,7 @@ Barra = definir_estrutura("barra","x y dx tam")
 BARRA_INICIAL = Barra(LARGURA // 2, Y, 0, 150)
 
 Bola = definir_estrutura("bola","x dx y dy")
-BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BARRA)//2 - 5, 0)
+BOLA_INICIAL = Bola(BARRA_INICIAL.x, 0, Y - altura_imagem(IMG_BARRA)//2 , 0)
 DX = 6
 
 
@@ -104,13 +104,13 @@ def colide_bola(bola,barra):
     lado_direito = barra.x + barra.tam // 2
     if bola.x <= lado_direito and bola.x >= lado_esquerdo and bola.y >= Y + altura_imagem(IMG_BARRA)/1.5:
 
-        if bola.x >= lado_esquerdo // 3:
+        if lado_esquerdo <= bola.x and bola.x <= lado_esquerdo + barra.tam // 3:
             if bola.dx == 0:
                 return 1
             else:
                 return 2
 
-        if bola.x <= lado_direito // 3:
+        if lado_direito >= bola.x and bola.x >= lado_direito - barra.tam // 3:
             if bola.dx == 0:
                 return 3
             else:
@@ -203,7 +203,7 @@ def mover_jogo(jogo):
         elif colisao == 2:
             nova_bola = Bola(nova_bola.x,0,nova_bola.y,-nova_bola.dy)
         elif colisao == 3:
-            nova_bola = Bola(nova_bola.x, DX, nova_bola.y, -nova_bola.dy)
+            nova_bola = Bola(nova_bola.x, -DX, nova_bola.y, -nova_bola.dy)
         elif colisao == 4:
             nova_bola = Bola(nova_bola.x, 0, nova_bola.y, -nova_bola.dy)
         elif colisao == 5:
