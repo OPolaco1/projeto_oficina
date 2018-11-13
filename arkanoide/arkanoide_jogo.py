@@ -102,7 +102,7 @@ teste
 def colide_bola(bola,barra):
     lado_esquerdo = barra.x - barra.tam // 2
     lado_direito = barra.x + barra.tam // 2
-    if bola.x <= lado_direito and bola.x >= lado_esquerdo and bola.y >= Y + altura_imagem(IMG_BARRA)/1.5:
+    if bola.x <= lado_direito and bola.x >= lado_esquerdo and bola.y >= Y - altura_imagem(IMG_BARRA)//2:
 
         if lado_esquerdo <= bola.x and bola.x <= lado_esquerdo + barra.tam // 3:
             if bola.dx == 0:
