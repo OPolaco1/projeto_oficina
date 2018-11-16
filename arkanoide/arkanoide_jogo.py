@@ -229,6 +229,17 @@ def colide_blocos(bola,blocos):
         if exclui_bloco:
             return exclui_bloco
 
+def inverte_bola(bola,bloco):
+    limite_bloco_cima = bloco.y - METADE_A_BLOCO
+    limite_bloco_baixo = bloco.y + METADE_A_BLOCO
+    limite_bloco_esquerda = bloco.x - METADE_L_BLOCO
+    limite_bloco_direita = bloco.x + METADE_L_BLOCO
+
+    if limite_bloco_baixo >= bola.y and limite_bloco_cima <= bola.y:
+        return 1
+    if limite_bloco_esquerda <= bola.x and limite_bloco_direita >= bola.x:
+        return 2
+
 
 
 def mover_jogo(jogo):
@@ -254,7 +265,11 @@ def mover_jogo(jogo):
 
         exclui_bloco = colide_blocos(jogo.bola,jogo.blocos)
         if exclui_bloco:
-
+            nova_bola = inverte_bola(jogo.bola,jogo.blocos)
+            if nova_bola == 1:
+                nova_bola = Bola(nova_bola.x, nova_bola.dx, nova_bola.y, -nova_bola.dy)
+            if nova_bola == 2:
+                nova_bola = Bola(nova_bola.x, -nova_bola.dx, nova_bola.y, nova_bola.dy)
             novos_blocos = [bloco for bloco in jogo.blocos if bloco != exclui_bloco]
             return Jogo(nova_barra,nova_bola,novos_blocos,False)
 
