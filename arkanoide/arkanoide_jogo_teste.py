@@ -18,3 +18,6 @@ class Test(unittest.TestCase):
     def testcolide_bloco(self):
         self.assertEqual(colide_bloco(Bola(400, 0, 150, 6), BLOCO1), False)
         self.assertEqual(colide_bloco(Bola(400, 0, 300, 6), BLOCO1), True)
+
+    def test_inverte_bola(self):
+        self.assertEqual(inverte_bola(Bola(400, 0, 150, 6), BLOCO1), Bola(400, 0, 150, -6))
