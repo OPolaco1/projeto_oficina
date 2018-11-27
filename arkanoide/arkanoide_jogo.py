@@ -4,6 +4,10 @@
 
 from htdp_pt_br.universe import *
 
+''' JOGO DO ARKANOID'''
+
+'''============================================================='''
+''' PREPARAÇÃO DE TELA E CONSTANTES'''
 FREQUENCIA = 60
 
 LARGURA,ALTURA = 800,800
@@ -28,11 +32,14 @@ Y = ALTURA // 2 + LARGURA // 2.5
 
 Bloco = definir_estrutura("bloco","x y")
 
-BLOCO1 = Bloco(400,300)
-BLOCO2 = Bloco(500,300)
-BLOCO3 = Bloco(600,300)
-
-LISTA = [BLOCO1, BLOCO2, BLOCO3]
+BLOCO1 = Bloco(400, 300)
+BLOCO2 = Bloco(500, 300)
+BLOCO3 = Bloco(600, 300)
+BLOCO4 = Bloco(100, 200)
+BLOCO5 = Bloco(200, 200)
+BLOCO6 = Bloco(300, 200)
+BLOCO7 = Bloco(700, 300)
+LISTA = [BLOCO1, BLOCO2, BLOCO3, BLOCO4, BLOCO5, BLOCO6, BLOCO7]
 
 METADE_L_BLOCO = largura_imagem(IMG_BLOCO) // 2
 METADE_A_BLOCO = altura_imagem(IMG_BLOCO) // 2
@@ -56,6 +63,8 @@ JOGO_INICIAL = Jogo(BARRA_INICIAL, BOLA_INICIAL, LISTA, False)
 '''
 as condicionais da função desenha serve para limitar o movimento da barra para nao ultrapassar os limites da tela
 '''
+'''========================'''
+''' DEFINIÇÃO DE DADOS'''
 def desenha_barra(barra):
     nova_barra = definir_dimensoes(IMG_BARRA,barra.tam,30)
     if (barra.x < LIMITE_DIREITO and barra.x > LIMITE_ESQUERDO):
@@ -96,22 +105,20 @@ def trata_tecla_barra(barra,tecla):
     '''
 
     if(barra.x < LIMITE_ESQUERDO):
-        return Barra(LIMITE_ESQUERDO,Y)
+        return Barra(LIMITE_ESQUERDO, Y, barra.dx, barra.tam)
     elif(barra.x > LIMITE_DIREITO):
-        return Barra(LIMITE_DIREITO,Y)
+        return Barra(LIMITE_DIREITO, Y, barra.dx, barra.tam)
     '''
     caso passe das comparações acima ele ira comparar qual tecla foi clicada para mover a barra para a direção certa
     obs ainda nao consegui fazer a barra mexer simplesmente segurando a tecla tem q aperfeiçoar isso 
     '''
     if tecla == SETA_ESQUERDA:
-        return Barra(barra.x, Y,barra.dx -3,barra.tam)
+        return Barra(barra.x, Y, barra.dx - 10, barra.tam)
     elif tecla == SETA_DIREITA:
-        return Barra(barra.x, Y, barra.dx +3,barra.tam)
+        return Barra(barra.x, Y, barra.dx + 10, barra.tam)
         #else
     return barra
-'''
-teste
-'''
+
 
 
 def colide_bola(bola,barra):
@@ -167,9 +174,9 @@ def mover_bola(bola):
     nova_bola_x = bola.x - bola.dx
 
     if nova_bola_y < 0 + altura_imagem(IMG_BOLA):
-        return Bola(nova_bola_x,bola.dx,nova_bola_y,-(bola.dy+0.5))
+        return Bola(nova_bola_x, bola.dx, nova_bola_y, -(bola.dy+0.5))
     if nova_bola_x < LIMITE_ESQUERDO or nova_bola_x > LIMITE_DIREITO:
-        return Bola(nova_bola_x,-bola.dx,nova_bola_y,bola.dy)
+        return Bola(nova_bola_x, -(bola.dx), nova_bola_y, bola.dy)
     # if nova_bola_x < 0 + altura_imagem(IMG_BOLA):
     #     return Bola(nova_bola_x,-bola.dx,bola.y,bola.dy)
     # if nova_bola_x
@@ -216,11 +223,12 @@ def colide_bloco(bola,bloco):
     limite_bloco_esquerda = bloco.x - METADE_L_BLOCO
     limite_bloco_direita = bloco.x + METADE_L_BLOCO
 
-    if limite_bloco_baixo >= ALTURA_BOLA and \
-        limite_bloco_cima <= ALTURA_BOLA and \
-        limite_bloco_direita >= ALTURA_BOLA and \
-        limite_bloco_esquerda <= ALTURA_BOLA:
+    if limite_bloco_baixo >= bola.y and \
+        limite_bloco_cima <= bola.y and \
+        limite_bloco_direita >= bola.x and \
+        limite_bloco_esquerda <= bola.x:
         return bloco
+    return False
 
 
 def colide_blocos(bola,blocos):
@@ -229,16 +237,53 @@ def colide_blocos(bola,blocos):
         if exclui_bloco:
             return exclui_bloco
 
-def inverte_bola(bola,bloco):
-    limite_bloco_cima = bloco.y - METADE_A_BLOCO
-    limite_bloco_baixo = bloco.y + METADE_A_BLOCO
-    limite_bloco_esquerda = bloco.x - METADE_L_BLOCO
-    limite_bloco_direita = bloco.x + METADE_L_BLOCO
+def inverte_bola1(bola, blocos):
+    for bloco in blocos:
+        nova_bola = inverte_bola(bola, bloco)
+        return nova_bola
 
-    if limite_bloco_baixo >= bola.y and limite_bloco_cima <= bola.y:
-        return 1
-    if limite_bloco_esquerda <= bola.x and limite_bloco_direita >= bola.x:
-        return 2
+def inverte_bola(bola,bloco):
+    nova_bola_y = bola.y - bola.dy
+    nova_bola_x = bola.x - bola.dx
+    lado_esquerdo = bloco.x - largura_imagem(IMG_BLOCO) // 2
+    lado_direito = bloco.x + largura_imagem(IMG_BLOCO) // 2
+    lado_cima = bloco.y - altura_imagem(IMG_BLOCO) // 2
+    lado_baixo = bloco.y + altura_imagem(IMG_BLOCO) // 2
+    # limite_bloco_cima = bloco.y - METADE_A_BLOCO
+    # limite_bloco_baixo = bloco.y + METADE_A_BLOCO
+    # limite_bloco_esquerda = bloco.x - METADE_L_BLOCO
+    # limite_bloco_direita = bloco.x + METADE_L_BLOCO
+
+    if lado_baixo <= bola.y and lado_cima >= bola.y:
+        return Bola(nova_bola_x, bola.dx, nova_bola_y, -bola.dy)
+
+    if lado_direito >= bola.x and  lado_esquerdo <= bola.x :
+        return Bola(nova_bola_x, -bola.dx, nova_bola_y, bola.dy)
+    return Bola(bola.x, bola.dx, bola.y, bola.dy)
+
+
+    #
+    # if limite_bloco_baixo >= bola.y and \aaa
+    #         limite_bloco_cima <= bola.y and \
+    #         limite_bloco_direita >= bola.x and \
+    #         limite_bloco_esquerda <= bola.x:
+    #
+
+
+    # limite_bloco_cima = bloco.y - METADE_A_BLOCO
+    # limite_bloco_baixo = bloco.y + METADE_A_BLOCO
+    # limite_bloco_esquerda = bloco.x - METADE_L_BLOCO
+    # limite_bloco_direita = bloco.x + METADE_L_BLOCO
+    #
+    # # if bola == 1:
+    # #     nova_bola = Bola(nova_bola.x, nova_bola.dx, nova_bola.y, -nova_bola.dy)
+    # # if nova_bola == 2:
+    # #     bola = bola(bola.x, -dx, bola.y, bola.dy)
+    #
+    # if limite_bloco_baixo >= bola.y and limite_bloco_cima <= bola.y:
+    #     return bola(bola.x, bola.dx, bola.y, -bola.dy)
+    # if limite_bloco_esquerda <= bola.x and limite_bloco_direita >= bola.x:
+    #     return bola(bola.x, -bola.dx, bola.y, bola.dy)
 
 
 
@@ -253,9 +298,9 @@ def mover_jogo(jogo):
             nova_bola = mover_bola(jogo.bola)
         colisao = colide_bola(nova_bola,jogo.barra)
         if colisao == 1:
-            nova_bola = Bola(nova_bola.x, DX,nova_bola.y,-nova_bola.dy)
+            nova_bola = Bola(nova_bola.x, DX, nova_bola.y,-nova_bola.dy)
         elif colisao == 2:
-            nova_bola = Bola(nova_bola.x,0,nova_bola.y,-nova_bola.dy)
+            nova_bola = Bola(nova_bola.x, 0, nova_bola.y,-nova_bola.dy)
         elif colisao == 3:
             nova_bola = Bola(nova_bola.x, -DX, nova_bola.y, -nova_bola.dy)
         elif colisao == 4:
@@ -265,13 +310,10 @@ def mover_jogo(jogo):
 
         exclui_bloco = colide_blocos(jogo.bola,jogo.blocos)
         if exclui_bloco:
-            nova_bola = inverte_bola(jogo.bola,jogo.blocos)
-            if nova_bola == 1:
-                nova_bola = Bola(nova_bola.x, nova_bola.dx, nova_bola.y, -nova_bola.dy)
-            if nova_bola == 2:
-                nova_bola = Bola(nova_bola.x, -nova_bola.dx, nova_bola.y, nova_bola.dy)
+            bola = inverte_bola1(jogo.bola, jogo.blocos)
+
             novos_blocos = [bloco for bloco in jogo.blocos if bloco != exclui_bloco]
-            return Jogo(nova_barra,nova_bola,novos_blocos,False)
+            return Jogo(nova_barra, bola, novos_blocos, False)
 
         return Jogo(nova_barra, nova_bola,jogo.blocos, False)
     return Jogo(jogo.barra,jogo.bola,jogo.blocos, True)
@@ -287,23 +329,3 @@ def desenha_jogo(jogo):
     else:
         return jogo
 
-#print(BARRA_INICIAL)
-'''
-
-
-Barra pode ser formada por: Int[
-
-'''
-
-'''
-retan = IMG_BOLA
-
-
-def desenhar(retan):
-    return colocar_imagem_sobre_tela_e_mostrar(retan,400,700)
-
-
-
-desenhar(retan)
-
-'''
