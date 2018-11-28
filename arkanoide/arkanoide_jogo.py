@@ -17,6 +17,7 @@ TELA = criar_tela_base(LARGURA,ALTURA)
 IMG_BARRA = carregar_imagem("barra.png", 150, 30)
 IMG_BOLA  = carregar_imagem("bolinha.png", 150, 100)
 IMG_BLOCO = carregar_imagem("bloco.jpg", 80, 20)
+GAME_OVER = carregar_imagem("game_over.png", 400, 400)
 
 
 
@@ -315,10 +316,12 @@ def mover_jogo(jogo):
             return Jogo(nova_barra, bola, novos_blocos, False)
 
         return Jogo(nova_barra, nova_bola,jogo.blocos, False)
+
     return Jogo(jogo.barra,jogo.bola,jogo.blocos, True)
 
 
-
+def desenha_game_over():
+    colocar_imagem(GAME_OVER, TELA, 400, 400)
 
 def desenha_jogo(jogo):
     if (not jogo.game_over):
@@ -326,5 +329,6 @@ def desenha_jogo(jogo):
         desenha_bola(jogo.bola)
         desenha_blocos(jogo.blocos)
     else:
-        return jogo
+        return desenha_game_over()
+
 
