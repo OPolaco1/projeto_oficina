@@ -33,13 +33,13 @@ Y = ALTURA // 2 + LARGURA // 2.5
 
 Bloco = definir_estrutura("bloco","x y")
 
-BLOCO1 = Bloco(400, 300)
-BLOCO2 = Bloco(500, 300)
-BLOCO3 = Bloco(600, 300)
-BLOCO4 = Bloco(100, 200)
+BLOCO1 = Bloco(420, 220)
+BLOCO2 = Bloco(500, 220)
+BLOCO3 = Bloco(580, 220)
+BLOCO4 = Bloco(500, 200)
 BLOCO5 = Bloco(200, 200)
-BLOCO6 = Bloco(300, 200)
-BLOCO7 = Bloco(700, 300)
+BLOCO6 = Bloco(280, 200)
+BLOCO7 = Bloco(660, 220)
 LISTA = [BLOCO1, BLOCO2, BLOCO3, BLOCO4, BLOCO5, BLOCO6, BLOCO7]
 
 METADE_L_BLOCO = largura_imagem(IMG_BLOCO) // 2
@@ -331,4 +331,7 @@ def desenha_jogo(jogo):
     else:
         return desenha_game_over()
 
-
+def cria_blocos():
+    for x in range (50, 750,largura_imagem(IMG_BLOCO)):
+        for y in range (200, 300,altura_imagem(IMG_BLOCO)):
+            novo_bloco = Bloco(x, y)
