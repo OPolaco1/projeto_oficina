@@ -237,14 +237,13 @@ def colide_blocos(bola,blocos):
         if exclui_bloco:
             return exclui_bloco
 
-def inverte_bola1(bola, blocos):
-    for bloco in blocos:
-        nova_bola = inverte_bola(bola, bloco)
-        return nova_bola
+# def inverte_bola1(bola, blocos):
+#     for bloco in blocos:
+#         nova_bola = inverte_bola(bola, bloco)
+#         return nova_bola
 
 def inverte_bola(bola,bloco):
-    nova_bola_y = bola.y - bola.dy
-    nova_bola_x = bola.x - bola.dx
+
     lado_esquerdo = bloco.x - largura_imagem(IMG_BLOCO) // 2
     lado_direito = bloco.x + largura_imagem(IMG_BLOCO) // 2
     lado_cima = bloco.y - altura_imagem(IMG_BLOCO) // 2
@@ -255,10 +254,10 @@ def inverte_bola(bola,bloco):
     # limite_bloco_direita = bloco.x + METADE_L_BLOCO
 
     if lado_baixo <= bola.y and lado_cima >= bola.y:
-        return Bola(nova_bola_x, bola.dx, nova_bola_y, -bola.dy)
+        return Bola(bola.x, -bola.dx, bola.y, bola.dy)
 
     if lado_direito >= bola.x and  lado_esquerdo <= bola.x :
-        return Bola(nova_bola_x, -bola.dx, nova_bola_y, bola.dy)
+        return Bola(bola.x, bola.dx, bola.y, -bola.dy)
     return Bola(bola.x, bola.dx, bola.y, bola.dy)
 
 
@@ -310,7 +309,7 @@ def mover_jogo(jogo):
 
         exclui_bloco = colide_blocos(jogo.bola,jogo.blocos)
         if exclui_bloco:
-            bola = inverte_bola1(jogo.bola, jogo.blocos)
+            bola = inverte_bola(jogo.bola, exclui_bloco)
 
             novos_blocos = [bloco for bloco in jogo.blocos if bloco != exclui_bloco]
             return Jogo(nova_barra, bola, novos_blocos, False)
