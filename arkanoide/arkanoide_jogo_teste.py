@@ -21,3 +21,4 @@ class Test(unittest.TestCase):
 
     def test_inverte_bola(self):
         self.assertEqual(inverte_bola(Bola(400, 0, 150, 6), BLOCO1), Bola(400, 0, 150, -6))
+        self.assertEqual(inverte_bola(Bola(500, 0, 150, 6), BLOCO2), Bola(500, 0, 150, -6))
