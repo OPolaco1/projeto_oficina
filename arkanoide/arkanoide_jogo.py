@@ -18,6 +18,7 @@ IMG_BARRA = carregar_imagem("barra.png", 150, 30)
 IMG_BOLA  = carregar_imagem("bolinha.png", 150, 100)
 IMG_BLOCO = carregar_imagem("bloco.jpg", 80, 20)
 GAME_OVER = carregar_imagem("game_over.png", 400, 400)
+WIN = carregar_imagem("win.png", 400, 400)
 
 
 
@@ -102,7 +103,7 @@ METADE_L_BLOCO = largura_imagem(IMG_BLOCO) // 2
 METADE_A_BLOCO = altura_imagem(IMG_BLOCO) // 2
 
 # ListaBlocos
-LISTA2 = []
+LISTA2 = [BLOCO4]
 
 
 Barra = definir_estrutura("barra","x y dx tam")
@@ -392,11 +393,16 @@ def mover_jogo(jogo):
 def desenha_game_over():
     colocar_imagem(GAME_OVER, TELA, 400, 400)
 
+def desenha_win():
+    carregar_imagem(WIN, TELA, 400, 400)
+
 def desenha_jogo(jogo):
     if (not jogo.game_over):
         desenha_barra(jogo.barra)
         desenha_bola(jogo.bola)
         desenha_blocos(jogo.blocos)
+        if jogo.blocos == []:
+            desenha_win()
     else:
         return desenha_game_over()
 
