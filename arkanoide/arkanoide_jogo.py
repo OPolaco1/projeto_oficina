@@ -33,19 +33,76 @@ Y = ALTURA // 2 + LARGURA // 2.5
 
 Bloco = definir_estrutura("bloco","x y")
 
-BLOCO1 = Bloco(420, 220)
-BLOCO2 = Bloco(500, 220)
-BLOCO3 = Bloco(580, 220)
-BLOCO4 = Bloco(500, 200)
+BLOCO1 = Bloco(440, 220)
+BLOCO2 = Bloco(520, 220)
+BLOCO3 = Bloco(600, 220)
+BLOCO4 = Bloco(520, 200)
 BLOCO5 = Bloco(200, 200)
 BLOCO6 = Bloco(280, 200)
-BLOCO7 = Bloco(660, 220)
-LISTA = [BLOCO1, BLOCO2, BLOCO3, BLOCO4, BLOCO5, BLOCO6, BLOCO7]
+BLOCO7 = Bloco(680, 220)
+BLOCO8 = Bloco(40, 200)
+BLOCO9 = Bloco(120, 200)
+BLOCO10 = Bloco(360, 200)
+BLOCO11 = Bloco(440, 200)
+BLOCO12 = Bloco(600,200)
+BLOCO13 = Bloco(680,200)
+BLOCO14 = Bloco(760,200)
+BLOCO15 = Bloco(40,220)
+BLOCO16 = Bloco(120,220)
+BLOCO17 = Bloco(200,220)
+BLOCO18 = Bloco(280,220)
+BLOCO19 = Bloco(360,220)
+BLOCO20 = Bloco(760,220)
+BLOCO21 = Bloco(40,240)
+BLOCO22 = Bloco(120,240)
+BLOCO23 = Bloco(200,240)
+BLOCO24 = Bloco(280,240)
+BLOCO25 = Bloco(360,240)
+BLOCO26 = Bloco(440,240)
+BLOCO27 = Bloco(520,240)
+BLOCO28 = Bloco(600,240)
+BLOCO29 = Bloco(680,240)
+BLOCO30 = Bloco(760,240)
+BLOCO31 = Bloco(40,260)
+BLOCO32 = Bloco(120,260)
+BLOCO33 = Bloco(200,260)
+BLOCO34 = Bloco(280,260)
+BLOCO35 = Bloco(360,260)
+BLOCO36 = Bloco(440,260)
+BLOCO37 = Bloco(520,260)
+BLOCO38 = Bloco(600,260)
+BLOCO39 = Bloco(680,260)
+BLOCO40 = Bloco(760,260)
+BLOCO41 = Bloco(40,280)
+BLOCO42 = Bloco(120,280)
+BLOCO43 = Bloco(200,280)
+BLOCO44 = Bloco(280,280)
+BLOCO45 = Bloco(360,280)
+BLOCO46 = Bloco(440,280)
+BLOCO47 = Bloco(520,280)
+BLOCO48 = Bloco(600,280)
+BLOCO49 = Bloco(680,280)
+BLOCO50 = Bloco(760,280)
+BLOCO51 = Bloco(40,300)
+BLOCO52 = Bloco(120,300)
+BLOCO53 = Bloco(200,300)
+BLOCO54 = Bloco(280,300)
+BLOCO55 = Bloco(360,300)
+BLOCO56 = Bloco(440,300)
+BLOCO57 = Bloco(520,300)
+BLOCO58 = Bloco(600,300)
+BLOCO59 = Bloco(680,300)
+BLOCO60 = Bloco(760,300)
+LISTA = [BLOCO1, BLOCO2, BLOCO3, BLOCO4, BLOCO5, BLOCO6, BLOCO7, BLOCO8, BLOCO9, BLOCO10, BLOCO11, BLOCO12, BLOCO13, BLOCO14, \
+         BLOCO15,BLOCO16,BLOCO17,BLOCO18,BLOCO19,BLOCO20,BLOCO21,BLOCO22,BLOCO23,BLOCO24,BLOCO25,BLOCO26,BLOCO27,BLOCO28,BLOCO29,\
+         BLOCO30,BLOCO31,BLOCO32,BLOCO33,BLOCO34,BLOCO35,BLOCO36,BLOCO37,BLOCO38,BLOCO39,BLOCO40,BLOCO41,BLOCO42,BLOCO43,BLOCO44,\
+         BLOCO45,BLOCO46,BLOCO47,BLOCO48,BLOCO49,BLOCO50,BLOCO51,BLOCO52,BLOCO53,BLOCO54,BLOCO55,BLOCO56,BLOCO57,BLOCO58,BLOCO59,BLOCO60]
 
 METADE_L_BLOCO = largura_imagem(IMG_BLOCO) // 2
 METADE_A_BLOCO = altura_imagem(IMG_BLOCO) // 2
 
 # ListaBlocos
+LISTA2 = []
 
 
 Barra = definir_estrutura("barra","x y dx tam")
@@ -58,6 +115,18 @@ DX = 6
 ALTURA_BOLA = altura_imagem(IMG_BOLA) // 2
 
 
+# def novos_blocos():
+#     for x in range(50, 750,largura_imagem(IMG_BLOCO)):
+#         for y in range(200, 300,altura_imagem(IMG_BLOCO)):
+#             novo_bloco = Bloco(x, y)
+#             y = y + 20
+#
+#             lista = [novo_bloco]
+#         x = x + 50
+#         return lista
+#
+#
+# NOVA_LISTA = novos_blocos()
 
 Jogo = definir_estrutura("jogo", "barra bola blocos game_over")
 JOGO_INICIAL = Jogo(BARRA_INICIAL, BOLA_INICIAL, LISTA, False)
@@ -331,7 +400,3 @@ def desenha_jogo(jogo):
     else:
         return desenha_game_over()
 
-def cria_blocos():
-    for x in range (50, 750,largura_imagem(IMG_BLOCO)):
-        for y in range (200, 300,altura_imagem(IMG_BLOCO)):
-            novo_bloco = Bloco(x, y)
