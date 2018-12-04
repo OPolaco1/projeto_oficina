@@ -401,8 +401,7 @@ def desenha_jogo(jogo):
         desenha_barra(jogo.barra)
         desenha_bola(jogo.bola)
         desenha_blocos(jogo.blocos)
-        if jogo.blocos == []:
-            desenha_win()
+
     else:
         return desenha_game_over()
 
